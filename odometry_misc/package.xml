@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>odometry_misc</name>
+  <version>1.0.0</version>
+  <description>This package provides ROS 2 components and scripts which are used to collect data for training and embedding a neural network which is used to compute the odometry of a humanoid robot. </description>
+  <maintainer email="v.bartel.vb@gmail.com">valerie</maintainer>
+  <license>MIT</license>
+
+ <depend>rclpy</depend>
+ <depend>geometry_msgs</depend>
+  <depend>wolfgang_webots_sim</depend>
+    <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>humanoid_league_msgs</depend>
+  <depend>bitbots_tf_listener</depend>
+  <depend>bitbots_msgs</depend>
+  <depend>bitbots_bringup</depend>
+  <depend>rosbag2_py</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

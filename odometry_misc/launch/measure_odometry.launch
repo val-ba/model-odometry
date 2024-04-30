@@ -1,0 +1,14 @@
+<launch>
+        <arg name="sim" default="true"/>
+    <include file="$(find-pkg-share wolfgang_webots_sim)/launch/simulation.launch" />
+        <include file="$(find-pkg-share bitbots_bringup)/launch/motion_standalone.launch" >
+                <arg name="sim" value="$(var sim)" />
+    </include>
+    <node pkg="odometry_misc" exec="measure_odometry" name="measure_node">
+            <param name="use_sim_time" value="$(var sim)"/>
+    </node>
+
+
+
+
+</launch>
